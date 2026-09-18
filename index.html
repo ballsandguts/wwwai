@@ -262,9 +262,9 @@ header.nav{
   padding:4px 8px; border-radius:4px; border:1px solid var(--line);
   color:var(--text-muted);
 }
-.hv-col.crypto .hv-col-label{color:var(--crypto-2); border-color:color-mix(in srgb, var(--crypto-2) 35%, var(--line));}
-.hv-col.ai .hv-col-label{color:var(--ai-2); border-color:color-mix(in srgb, var(--ai-2) 35%, var(--line));}
-.hv-col.web .hv-col-label{color:var(--web-2); border-color:color-mix(in srgb, var(--web-2) 35%, var(--line));}
+.hv-col.crypto .hv-col-label{color:#07110d; background:var(--crypto-2); border-color:var(--crypto-2); font-weight:700;}
+.hv-col.ai .hv-col-label{color:#14091d; background:var(--ai-1); border-color:var(--ai-1); font-weight:700;}
+.hv-col.web .hv-col-label{color:#06131b; background:var(--web-1); border-color:var(--web-1); font-weight:700;}
 .hv-node{
   width:100%; text-align:center;
   font-family:var(--font-mono); font-size:.72rem;
@@ -610,6 +610,23 @@ a:focus-visible, button:focus-visible{
 .accent-crypto{ --accent-1:var(--crypto-2); --accent-2:var(--crypto-1); }
 .accent-ai{ --accent-1:var(--ai-1); --accent-2:var(--ai-2); }
 .accent-web{ --accent-1:var(--web-1); --accent-2:var(--web-2); }
+
+/* Featured YouTube video */
+.feature-video{padding-top:72px;}
+.feature-video .section-head{margin-bottom:28px;}
+.video-frame{position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border:1px solid var(--line); border-radius:10px; background:#080b10;}
+.video-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
+
+/* AI Video brand robot logo */
+.brand-identity{display:flex;align-items:center;}
+.trust-one-on-one{display:inline-block;padding:6px 10px;margin-top:4px;border-radius:5px;background:var(--crypto-2);color:#07110d;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;font-weight:800;}
+.robot-head-logo{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;flex:0 0 42px;color:var(--ai-1);margin-right:11px;}
+.robot-head-logo svg{width:100%;height:100%;display:block;}
+.crypto-bitcoin-logo{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;flex:0 0 42px;color:var(--crypto-2);margin-right:11px;}
+.crypto-bitcoin-logo svg{width:100%;height:100%;display:block;}
+.speed-logo{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;flex:0 0 42px;color:var(--web-1);margin-right:11px;}
+.speed-logo svg{width:100%;height:100%;display:block;}
+
 </style>
 </head>
 <body>
@@ -694,7 +711,7 @@ a:focus-visible, button:focus-visible{
           <span data-i18n="cta.contactTelegram">Contact us on Telegram</span>
         </a>
       </div>
-      <p class="hero-note"><span class="cursor-blink" aria-hidden="true"></span><span data-i18n="hero.note">Direct contact. No forms. No unnecessary steps.</span></p>
+      <p class="hero-note"><span class="cursor-blink" aria-hidden="true"></span><span data-i18n="hero.note">Direct contact. No forms. No boring tutorials or guides.</span></p>
     </div>
 
     <div class="hero-visual reveal" aria-hidden="false">
@@ -742,6 +759,28 @@ a:focus-visible, button:focus-visible{
   </div>
 </section>
 
+<!-- ============================================================
+     FEATURE VIDEO
+     Replace the YouTube ID in the iframe src when ready.
+     ============================================================ -->
+<section class="section feature-video" id="featured-video">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FEATURED VIDEO</span>
+      <h2>See WWW AI in action.</h2>
+    </div>
+    <div class="video-frame reveal">
+      <iframe
+        src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
+        title="WWW AI Featured Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
 <div class="strip">
   <div class="container">
     <span data-i18n="strip.a">No fake promises</span>
@@ -774,6 +813,14 @@ a:focus-visible, button:focus-visible{
         <span class="panel-cat">01 / CRYPTO</span><span class="badge-3in1" data-i18n="svc.crypto.badge">3 services in one</span>
         <h3 data-i18n="svc.crypto.title">Crypto</h3>
         <p class="idea" data-i18n="svc.crypto.idea">From your first wallet to complex blockchain investigations.</p>
+        <div class="brand-block">
+          <div>
+            <div class="brand-identity"><span class="crypto-bitcoin-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="3"/><path d="M36 16c6 1 9 4 9 9 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 11-14 11H22V12h11c8 0 13 4 13 10 0 4-2 7-5 8M27 12v40M21 22h12c4 0 6-2 6-5s-2-5-7-5M21 31h13c5 0 8 2 8 6s-3 6-8 6H21" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="brand-wordmark">1MBTC <span class="accent-char">Lab</span></div></div>
+          </div>
+          <a class="brand-visit" href="https://1mbtclab.vercel.app/" target="_blank" rel="noreferrer">
+            Visit 1MBTC Lab ↗
+          </a>
+        </div>
       </div>
 
       <div class="crypto-subnav" role="tablist" aria-label="Crypto services">
@@ -886,8 +933,8 @@ a:focus-visible, button:focus-visible{
         <p class="desc" data-i18n="svc.ai-video.desc">AI-assisted video creation for music videos, short films, social content, cinematic concepts and visual experiments.</p>
         <div class="brand-block">
           <div>
-            <div class="brand-wordmark">BALLS <span class="accent-char">&amp;</span> GUTS</div>
-            <div class="brand-tagline" data-i18n="svc.ai-video.tagline">No fluff. No jargon. Real results.</div>
+            <div class="brand-identity"><span class="robot-head-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="14" y="18" width="36" height="30" rx="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="M32 18V11M28 8h8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="32" r="3" fill="currentColor"/><circle cx="39" cy="32" r="3" fill="currentColor"/><path d="M23 40h18M10 29h4M50 29h4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span><div class="brand-wordmark">BALLS <span class="accent-char">&amp;</span> GUTS</div></div>
+            <div class="brand-tagline" data-i18n="svc.ai-video.tagline">We create it for you — or teach you how to create it.</div>
           </div>
           <a class="brand-visit" href="https://ballsandguts.fun/" target="_blank" rel="noreferrer">
             <span data-i18n="svc.ai-video.visit">Visit ballsandguts.fun</span> ↗
@@ -921,7 +968,7 @@ a:focus-visible, button:focus-visible{
         <p class="desc" data-i18n="svc.web-development.desc">Fast, modern websites for people and small businesses that need to get online without spending weeks or thousands of dollars.</p>
         <div class="brand-block">
           <div>
-            <div class="brand-wordmark">DAYSHIP <span class="accent-char">WEBS</span></div>
+            <div class="brand-identity"><span class="speed-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 36h30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M25 22h25M19 29h34" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M40 36l11 0-8 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="brand-wordmark">DAYSHIP <span class="accent-char">WEBS</span></div></div>
             <div class="brand-tagline" data-i18n="svc.web-development.tagline">Beautiful websites in 24 hours, for the price of a meal.</div>
             <div class="brand-chip">24H DELIVERY · FROM $49</div>
           </div>
@@ -953,26 +1000,6 @@ a:focus-visible, button:focus-visible{
 </section>
 
 <!-- ============================================================
-     CRYPTO CONNECTOR
-     ============================================================ -->
-<section class="section" style="padding-top:0;">
-  <div class="container reveal">
-    <div class="section-head" style="margin-bottom:0;">
-      <span class="eyebrow" data-i18n="connector.eyebrow">CRYPTO PATH</span>
-      <h2 style="font-size:clamp(1.6rem,3.4vw,2.1rem);" data-i18n="connector.title">From your first crypto transaction to complex blockchain investigations.</h2>
-    </div>
-    <div class="flowline">
-      <span class="fl-step" data-i18n="connector.learn">LEARN</span><span class="fl-arrow">→</span>
-      <span class="fl-step" data-i18n="connector.understand">UNDERSTAND</span><span class="fl-arrow">→</span>
-      <span class="fl-step" data-i18n="connector.investigate">INVESTIGATE</span><span class="fl-arrow">→</span>
-      <span class="fl-step" data-i18n="connector.recover">RECOVER</span>
-    </div>
-  </div>
-</section>
-
-<div class="container"><div class="divider"></div></div>
-
-<!-- ============================================================
      TRUST
      ============================================================ -->
 <section class="section" id="trust">
@@ -985,6 +1012,8 @@ a:focus-visible, button:focus-visible{
         <span data-i18n="trust.p1">NO FAKE PROMISES</span>
         <span data-i18n="trust.p2">NO UNNECESSARY FORMS</span>
         <span data-i18n="trust.p3">NO BULLSHIT</span>
+        <span data-i18n="trust.p4">NO BORING TUTORIALS OR GUIDES</span>
+        <span class="trust-one-on-one">ONE-ON-ONE Contact</span>
       </div>
     </div>
   </div>
@@ -1173,7 +1202,7 @@ const translations = {
       w1: "UNDERSTAND.", w2: "CREATE.", w3: "BUILD.", w4: "RECOVER.",
       sub: "Practical technology services for the digital world.",
       desc: "WWW AI helps people understand crypto, investigate blockchain activity, recover inaccessible wallets, create AI-powered videos and build professional websites.",
-      note: "Direct contact. No forms. No unnecessary steps.",
+      note: "Direct contact. No forms. No boring tutorials or guides.",
       visualLabel: "WWW AI ECOSYSTEM",
       v: { wallet:"Wallet", tx:"Transaction", chain:"Blockchain", recovery:"Recovery", idea:"Idea", ai:"AI", frames:"Frames", video:"Video", code:"Code", design:"Design", deploy:"Deployment", site:"Website", converge:"converging into", explore:"Explore" }
     },
@@ -1195,7 +1224,7 @@ const translations = {
         cta:"Discuss a recovery case", visualLabel:"FORENSIC LAYERS" },
       "ai-video": { navlabel:"AI Video", title:"AI Video Creation", idea:"Turn ideas into moving images.",
         desc:"AI-assisted video creation for music videos, short films, social content, cinematic concepts and visual experiments.",
-        tagline:"No fluff. No jargon. Real results.", visit:"Visit ballsandguts.fun",
+        tagline:"We create it for you — or teach you how to create it.", visit:"Visit ballsandguts.fun",
         cta:"Create a video", visualLabel:"GENERATION TIMELINE" },
       "web-development": { navlabel:"Websites", title:"Website Development", idea:"A professional website in 24 hours.",
         desc:"Fast, modern websites for people and small businesses that need to get online without spending weeks or thousands of dollars.",
@@ -1215,7 +1244,7 @@ const translations = {
       s3:{t:"Work", d:"We build, investigate, create or guide you through the process."},
       s4:{t:"Deliver", d:"You receive the result, analysis or next actionable step."} },
     trust: { eyebrow:"TRUST", title:"No smoke. Just the work.", copy:"WWW AI is built around direct communication, technical honesty and practical solutions.",
-      p1:"NO FAKE PROMISES", p2:"NO UNNECESSARY FORMS", p3:"NO BULLSHIT" },
+      p1:"NO FAKE PROMISES", p2:"NO UNNECESSARY FORMS", p3:"NO BULLSHIT", p4:"NO BORING TUTORIALS OR GUIDES" },
     cross: { title1:"FROM CRYPTO", title2:"TO AI", title3:"TO THE WEB.", f1:"CRYPTO", f2:"DATA", f3:"AI", f4:"CREATIVE", f5:"WEB", sub:"Different technologies. One practical approach." },
     faq: { eyebrow:"FAQ", title:"Frequently asked questions",
       g1:"Crypto Introduction", g2:"Transaction Mapping", g3:"Wallet Recovery", g4:"AI Video", g5:"Websites",
@@ -1244,7 +1273,7 @@ const translations = {
       w1: "ENTENDER.", w2: "CREAR.", w3: "CONSTRUIR.", w4: "RECUPERAR.",
       sub: "Servicios de tecnología prácticos para el mundo digital.",
       desc: "WWW AI ayuda a las personas a entender cripto, investigar actividad en blockchain, recuperar wallets inaccesibles, crear videos con IA y construir sitios web profesionales.",
-      note: "Contacto directo. Sin formularios. Sin pasos innecesarios.",
+      note: "Contacto directo. Sin formularios. Sin tutoriales ni guías aburridas.",
       visualLabel: "ECOSISTEMA WWW AI",
       v: { wallet:"Wallet", tx:"Transacción", chain:"Blockchain", recovery:"Recuperación", idea:"Idea", ai:"IA", frames:"Frames", video:"Video", code:"Código", design:"Diseño", deploy:"Despliegue", site:"Sitio web", converge:"convergiendo en", explore:"Explorar" }
     },
@@ -1266,7 +1295,7 @@ const translations = {
         cta:"Hablar sobre un caso de recuperación", visualLabel:"CAPAS FORENSES" },
       "ai-video": { navlabel:"Video con IA", title:"Creación de Video con IA", idea:"Convertí ideas en imágenes en movimiento.",
         desc:"Creación de video asistida por IA para videoclips musicales, cortometrajes, contenido para redes, conceptos cinematográficos y experimentos visuales.",
-        tagline:"Sin humo. Sin tecnicismos raros. Resultados reales.", visit:"Visitar ballsandguts.fun",
+        tagline:"Lo creamos por vos — o te enseñamos a crearlo.", visit:"Visitar ballsandguts.fun",
         cta:"Crear un video", visualLabel:"LÍNEA DE TIEMPO DE GENERACIÓN" },
       "web-development": { navlabel:"Sitios Web", title:"Desarrollo de Sitios Web", idea:"Un sitio web profesional en 24 horas.",
         desc:"Sitios web rápidos y modernos para personas y pequeños negocios que necesitan estar online sin gastar semanas ni miles de dólares.",
