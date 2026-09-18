@@ -327,14 +327,40 @@ header.nav{
 }
 .sel-btn{
   font-family:var(--font-mono); font-size:.82rem;
-  padding:12px 16px; color:var(--text-muted);
+  padding:12px 16px; color:var(--text);
+  border:1px solid transparent;
   border-bottom:2px solid transparent;
+  border-radius:6px 6px 0 0;
   display:flex; align-items:center; gap:8px;
-  transition:color .15s ease, border-color .15s ease;
+  transition:color .15s ease, border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
 }
-.sel-btn .num{color:var(--line);}
-.sel-btn[aria-selected="true"]{color:var(--text); border-color:var(--accent-btn, var(--text));}
-.sel-btn:hover{color:var(--text);}
+
+/* WHAT WE DO buttons — each uses the same accent colors as the hero title */
+.sel-btn[data-service="crypto"]{
+  --sel-color:var(--crypto-2);
+  background:color-mix(in srgb, var(--crypto-2) 13%, var(--bg-2));
+}
+.sel-btn[data-service="ai-video"]{
+  --sel-color:var(--ai-1);
+  background:color-mix(in srgb, var(--ai-1) 13%, var(--bg-2));
+}
+.sel-btn[data-service="web-development"]{
+  --sel-color:var(--web-1);
+  background:color-mix(in srgb, var(--web-1) 13%, var(--bg-2));
+}
+
+.sel-btn .num{color:var(--sel-color); font-weight:600;}
+.sel-btn[aria-selected="true"]{
+  color:var(--text);
+  border-color:color-mix(in srgb, var(--sel-color) 55%, var(--line));
+  border-bottom-color:var(--sel-color);
+  background:color-mix(in srgb, var(--sel-color) 22%, var(--bg-2));
+  box-shadow:0 4px 18px color-mix(in srgb, var(--sel-color) 10%, transparent);
+}
+.sel-btn:hover{
+  color:var(--text);
+  background:color-mix(in srgb, var(--sel-color) 18%, var(--bg-2));
+}
 
 .panel{display:none;}
 .panel.active{display:grid; gap:36px;}
