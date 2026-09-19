@@ -627,6 +627,29 @@ a:focus-visible, button:focus-visible{
 .speed-logo{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;flex:0 0 42px;color:var(--web-1);margin-right:11px;}
 .speed-logo svg{width:100%;height:100%;display:block;}
 
+/* Hero video */
+.hero-video .video-frame{box-shadow:0 20px 60px rgba(0,0,0,.35);}
+
+/* Services stacked */
+.svc-stack{display:flex; flex-direction:column;}
+.svc-stack .panel{padding:56px 0; border-top:1px solid var(--line);}
+.svc-stack .panel:first-child{border-top:0; padding-top:0;}
+.svc-stack .panel:last-child{padding-bottom:0;}
+
+/* Crypto mini-services list */
+.mini-list{margin-top:22px; display:flex; flex-direction:column; border-top:1px solid var(--line);}
+.mini{padding:16px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; gap:8px 16px; flex-wrap:wrap;}
+.mini h4{font-size:1rem;}
+.mini p{color:var(--text-muted); font-size:.88rem; margin-top:4px; max-width:44ch;}
+.mini a{font-family:var(--font-mono); font-size:.78rem; color:var(--accent-1); white-space:nowrap;}
+.mini a:hover{text-decoration:underline;}
+
+/* Website screenshot */
+.shot{display:block; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--card); transition:border-color .15s ease, transform .15s ease;}
+.shot:hover{border-color:color-mix(in srgb, var(--accent-1) 55%, var(--line)); transform:translateY(-2px);}
+.shot-bar{display:flex; align-items:center; gap:6px; padding:8px 10px; background:var(--bg-2); border-bottom:1px solid var(--line);}
+.shot img{width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; object-position:top center;}
+
 </style>
 </head>
 <body>
@@ -714,69 +737,16 @@ a:focus-visible, button:focus-visible{
       <p class="hero-note"><span class="cursor-blink" aria-hidden="true"></span><span data-i18n="hero.note">Direct contact. No forms. No boring tutorials or guides.</span></p>
     </div>
 
-    <div class="hero-visual reveal" aria-hidden="false">
-      <div class="hv-title" data-i18n="hero.visualLabel">WWW AI ECOSYSTEM</div>
-      <div class="hv-systems">
-        <div class="hv-col crypto">
-          <span class="hv-col-label">CRYPTO</span>
-          <div class="hv-node" data-i18n="hero.v.wallet">Wallet</div>
-          <div class="hv-arrow"></div>
-          <div class="hv-node" data-i18n="hero.v.tx">Transaction</div>
-          <div class="hv-arrow"></div>
-          <div class="hv-node" data-i18n="hero.v.chain">Blockchain</div>
-          <div class="hv-arrow"></div>
-          <div class="hv-node" data-i18n="hero.v.recovery">Recovery</div>
-          <button class="hv-explore" type="button" data-goto="crypto"><span data-i18n="hero.v.explore">Explore</span> ↓</button>
-        </div>
-        <div class="hv-col ai">
-          <span class="hv-col-label">AI VIDEO</span>
-          <div class="hv-node" data-i18n="hero.v.idea">Idea</div>
-          <div class="hv-arrow"></div>
-          <div class="hv-node" data-i18n="hero.v.ai">AI</div>
-          <div class="hv-arrow"></div>
-          <div class="hv-node" data-i18n="hero.v.frames">Frames</div>
-          <div class="hv-arrow"></div>
-          <div class="hv-node" data-i18n="hero.v.video">Video</div>
-          <button class="hv-explore" type="button" data-goto="ai-video"><span data-i18n="hero.v.explore">Explore</span> ↓</button>
-        </div>
-        <div class="hv-col web">
-          <span class="hv-col-label">24hs WEB</span>
-          <div class="hv-node" data-i18n="hero.v.code">Code</div>
-          <div class="hv-arrow"></div>
-          <div class="hv-node" data-i18n="hero.v.design">Design</div>
-          <div class="hv-arrow"></div>
-          <div class="hv-node" data-i18n="hero.v.deploy">Deployment</div>
-          <div class="hv-arrow"></div>
-          <div class="hv-node" data-i18n="hero.v.site">Website</div>
-          <button class="hv-explore" type="button" data-goto="web-development"><span data-i18n="hero.v.explore">Explore</span> ↓</button>
-        </div>
+    <div class="hero-video reveal">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=YOUTUBE_VIDEO_ID&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
+          title="WWW AI Featured Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
-      <div class="hv-converge">
-        <span class="hv-pulse" aria-hidden="true"></span>
-        <span data-i18n="hero.v.converge">converging into</span> <b>WWW AI</b>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     FEATURE VIDEO
-     Replace the YouTube ID in the iframe src when ready.
-     ============================================================ -->
-<section class="section feature-video" id="featured-video">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">FEATURED VIDEO</span>
-      <h2>See WWW AI in action.</h2>
-    </div>
-    <div class="video-frame reveal">
-      <iframe
-        src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
-        title="WWW AI Featured Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
     </div>
   </div>
 </section>
@@ -801,200 +771,106 @@ a:focus-visible, button:focus-visible{
       <h2 data-i18n="services.title">Three ways to use technology more effectively.</h2>
     </div>
 
-    <div class="selector" role="tablist" aria-label="Services">
-      <button class="sel-btn" data-service="crypto" role="tab" aria-selected="true"><span class="num">01</span> <span data-i18n="svc.crypto.navlabel">Crypto</span></button>
-      <button class="sel-btn" data-service="ai-video" role="tab" aria-selected="false"><span class="num">02</span> <span data-i18n="svc.ai-video.navlabel">AI Video</span></button>
-      <button class="sel-btn" data-service="web-development" role="tab" aria-selected="false"><span class="num">03</span> <span data-i18n="svc.web-development.navlabel">Websites</span></button>
-    </div>
+    <div class="svc-stack">
 
-    <!-- Panel 01 — Crypto (3-in-1) -->
-    <div class="panel panel-crypto active accent-crypto" data-panel="crypto">
-      <div>
-        <span class="panel-cat">01 / CRYPTO</span><span class="badge-3in1" data-i18n="svc.crypto.badge">3 services in one</span>
-        <h3 data-i18n="svc.crypto.title">Crypto</h3>
-        <p class="idea" data-i18n="svc.crypto.idea">From your first wallet to complex blockchain investigations.</p>
-        <div class="brand-block">
-          <div>
-            <div class="brand-identity"><span class="crypto-bitcoin-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="3"/><path d="M36 16c6 1 9 4 9 9 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 11-14 11H22V12h11c8 0 13 4 13 10 0 4-2 7-5 8M27 12v40M21 22h12c4 0 6-2 6-5s-2-5-7-5M21 31h13c5 0 8 2 8 6s-3 6-8 6H21" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="brand-wordmark">1MBTC <span class="accent-char">Lab</span></div></div>
-          </div>
-          <a class="brand-visit" href="https://1mbtclab.vercel.app/" target="_blank" rel="noreferrer">
-            Visit 1MBTC Lab ↗
-          </a>
-        </div>
-      </div>
-
-      <div class="crypto-subnav" role="tablist" aria-label="Crypto services">
-        <button class="sub-sel-btn" data-subservice="crypto-intro" role="tab" aria-selected="true"><span class="num">01</span> <span data-i18n="svc.crypto-intro.navlabel">Intro</span></button>
-        <button class="sub-sel-btn" data-subservice="transaction-mapping" role="tab" aria-selected="false"><span class="num">02</span> <span data-i18n="svc.transaction-mapping.navlabel">Transaction Map</span></button>
-        <button class="sub-sel-btn" data-subservice="wallet-recovery" role="tab" aria-selected="false"><span class="num">03</span> <span data-i18n="svc.wallet-recovery.navlabel">Recovery</span></button>
-      </div>
-
-      <!-- Sub-panel 01 — Intro -->
-      <div class="subpanel active" data-subpanel="crypto-intro">
+      <!-- 01 — CRYPTO -->
+      <div class="panel active accent-crypto reveal" data-panel="crypto">
         <div>
-          <span class="panel-cat">01 / INTRO</span>
-          <h3 data-i18n="svc.crypto-intro.title">Introduction to Crypto</h3>
-          <p class="idea" data-i18n="svc.crypto-intro.idea">Understand crypto before you use it.</p>
-          <p class="desc" data-i18n="svc.crypto-intro.desc">One-on-one practical guidance to help you create and use a secure crypto wallet through a popular centralized exchange, understand how receiving and sending payments works, and become familiar with depositing and withdrawing funds safely.</p>
-          <div class="safety" data-i18n="svc.crypto-intro.note">This is educational and practical onboarding — not investment advice. We don't promise profits or recommend specific purchases.</div>
-          <div class="cta-row">
-            <a class="btn btn-accent" data-cta-wa target="_blank" rel="noreferrer" data-msg="crypto-intro"><span data-i18n="svc.crypto-intro.cta">Start learning</span> →</a>
+          <span class="panel-cat">01 / CRYPTO</span>
+          <h3 data-i18n="svc.crypto.title">Crypto</h3>
+          <p class="idea" data-i18n="svc.crypto.idea">From your first wallet to complex blockchain investigations.</p>
+
+          <div class="mini-list">
+            <div class="mini">
+              <div>
+                <h4 data-i18n="svc.crypto-intro.title">Introduction to Crypto</h4>
+                <p data-i18n="svc.crypto-intro.idea">Understand crypto before you use it.</p>
+              </div>
+              <a data-cta-wa data-msg="crypto-intro" target="_blank" rel="noreferrer"><span data-i18n="svc.crypto-intro.cta">Start learning</span> →</a>
+            </div>
+            <div class="mini">
+              <div>
+                <h4 data-i18n="svc.transaction-mapping.title">Crypto Transaction Mapping</h4>
+                <p data-i18n="svc.transaction-mapping.idea">Make blockchain activity easier to understand.</p>
+              </div>
+              <a data-cta-wa data-msg="transaction-mapping" target="_blank" rel="noreferrer"><span data-i18n="svc.transaction-mapping.cta">Map a wallet</span> →</a>
+            </div>
+            <div class="mini">
+              <div>
+                <h4 data-i18n="svc.wallet-recovery.title">Crypto Wallet Recovery</h4>
+                <p data-i18n="svc.wallet-recovery.idea">Investigate what may still be recoverable.</p>
+              </div>
+              <a data-cta-wa data-msg="wallet-recovery" target="_blank" rel="noreferrer"><span data-i18n="svc.wallet-recovery.cta">Discuss a recovery case</span> →</a>
+            </div>
+          </div>
+
+          <div class="safety" data-i18n="svc.crypto.note">Educational only, not investment advice. Recovery results are never guaranteed, and we'll never ask for your seed phrase, private key or password.</div>
+
+          <div class="brand-block">
+            <div>
+              <div class="brand-identity"><span class="crypto-bitcoin-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="3"/><path d="M36 16c6 1 9 4 9 9 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 11-14 11H22V12h11c8 0 13 4 13 10 0 4-2 7-5 8M27 12v40M21 22h12c4 0 6-2 6-5s-2-5-7-5M21 31h13c5 0 8 2 8 6s-3 6-8 6H21" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="brand-wordmark">1MBTC <span class="accent-char">Lab</span></div></div>
+            </div>
+            <a class="brand-visit" href="https://1mbtclab.vercel.app/" target="_blank" rel="noreferrer">Visit 1MBTC Lab ↗</a>
           </div>
         </div>
-        <div class="panel-visual">
-          <div class="pv-label" data-i18n="svc.crypto-intro.visualLabel">ONBOARDING PATH</div>
-          <div class="pv-flow">
-            <div class="pv-row"><span class="pv-chip on">WALLET</span><span class="pv-line on"></span><span class="pv-chip">EXCHANGE</span></div>
-            <div class="pv-row"><span class="pv-chip">DEPOSIT</span><span class="pv-line"></span><span class="pv-chip">CONFIRM</span></div>
-            <div class="pv-row"><span class="pv-chip">SEND</span><span class="pv-line"></span><span class="pv-chip">RECEIVE</span></div>
-            <div class="pv-row"><span class="pv-chip">WITHDRAW</span><span class="pv-line"></span><span class="pv-chip on">SECURE</span></div>
-          </div>
-        </div>
+
+        <a class="shot" href="https://1mbtclab.vercel.app/" target="_blank" rel="noreferrer" aria-label="1MBTC Lab">
+          <div class="shot-bar"><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-browser-url">1mbtclab.vercel.app</span></div>
+          <img src="img/1mbtclab.jpg" alt="1MBTC Lab website screenshot" width="1600" height="1000" loading="lazy">
+        </a>
       </div>
 
-      <!-- Sub-panel 02 — Transaction Mapping -->
-      <div class="subpanel" data-subpanel="transaction-mapping">
+      <!-- 02 — AI VIDEO -->
+      <div class="panel active accent-ai reveal" data-panel="ai-video">
         <div>
-          <span class="panel-cat">02 / TRANSACTION MAP</span>
-          <h3 data-i18n="svc.transaction-mapping.title">Crypto Transaction Mapping</h3>
-          <p class="idea" data-i18n="svc.transaction-mapping.idea">Make blockchain activity easier to understand.</p>
-          <p class="desc" data-i18n="svc.transaction-mapping.desc">We map and organize cryptocurrency wallet activity to help you understand how funds moved between addresses and transactions.</p>
-          <div class="safety" data-i18n="svc.transaction-mapping.note">Findings are limited to what the underlying blockchain data actually supports — we don't imply certainty beyond that.</div>
+          <span class="panel-cat">02 / AI VIDEO</span>
+          <h3 data-i18n="svc.ai-video.title">AI Video Creation</h3>
+          <p class="idea" data-i18n="svc.ai-video.idea">Turn ideas into moving images.</p>
+          <p class="desc" data-i18n="svc.ai-video.desc">AI-assisted video creation for music videos, short films, social content, cinematic concepts and visual experiments.</p>
+          <div class="brand-block">
+            <div>
+              <div class="brand-identity"><span class="robot-head-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="14" y="18" width="36" height="30" rx="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="M32 18V11M28 8h8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="32" r="3" fill="currentColor"/><circle cx="39" cy="32" r="3" fill="currentColor"/><path d="M23 40h18M10 29h4M50 29h4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span><div class="brand-wordmark">BALLS <span class="accent-char">&amp;</span> GUTS</div></div>
+              <div class="brand-tagline" data-i18n="svc.ai-video.tagline">We create it for you — or teach you how to create it.</div>
+            </div>
+            <a class="brand-visit" href="https://ballsandguts.fun/" target="_blank" rel="noreferrer"><span data-i18n="svc.ai-video.visit">Visit ballsandguts.fun</span> ↗</a>
+          </div>
           <div class="cta-row">
-            <a class="btn btn-accent" data-cta-wa target="_blank" rel="noreferrer" data-msg="transaction-mapping"><span data-i18n="svc.transaction-mapping.cta">Map a wallet</span> →</a>
+            <a class="btn btn-accent" data-cta-wa target="_blank" rel="noreferrer" data-msg="ai-video"><span data-i18n="svc.ai-video.cta">Create a video</span> →</a>
           </div>
         </div>
-        <div class="panel-visual">
-          <div class="pv-label" data-i18n="svc.transaction-mapping.visualLabel">ADDRESS FLOW</div>
-          <div class="pv-net">
-            <svg viewBox="0 0 320 200" fill="none">
-              <g stroke="#1D2932" stroke-width="1">
-                <line x1="30" y1="40" x2="120" y2="70"/>
-                <line x1="120" y1="70" x2="210" y2="40"/>
-                <line x1="120" y1="70" x2="120" y2="140"/>
-                <line x1="120" y1="140" x2="220" y2="160"/>
-                <line x1="120" y1="140" x2="40" y2="165"/>
-                <line x1="210" y1="40" x2="290" y2="80"/>
-              </g>
-              <g stroke="#38D9C5" stroke-width="1.2">
-                <line x1="30" y1="40" x2="120" y2="70" opacity="0.6"/>
-                <line x1="120" y1="70" x2="120" y2="140" opacity="0.6"/>
-              </g>
-              <g font-family="JetBrains Mono" font-size="8" fill="#8B98A5">
-                <circle cx="30" cy="40" r="4" fill="#0D141B" stroke="#38D9C5"/>
-                <text x="40" y="38">ADDR</text>
-                <circle cx="120" cy="70" r="4" fill="#0D141B" stroke="#38D9C5"/>
-                <text x="130" y="68">TX</text>
-                <circle cx="210" cy="40" r="4" fill="#0D141B" stroke="#1D2932"/>
-                <text x="220" y="38">ADDR</text>
-                <circle cx="120" cy="140" r="4" fill="#0D141B" stroke="#38D9C5"/>
-                <text x="130" y="138">TX</text>
-                <circle cx="220" cy="160" r="4" fill="#0D141B" stroke="#1D2932"/>
-                <text x="230" y="158">ADDR</text>
-                <circle cx="40" cy="165" r="4" fill="#0D141B" stroke="#1D2932"/>
-                <text x="10" y="182">ADDR</text>
-                <circle cx="290" cy="80" r="4" fill="#0D141B" stroke="#1D2932"/>
-                <text x="265" y="70">BLOCK</text>
-              </g>
-            </svg>
-          </div>
-        </div>
+
+        <a class="shot" href="https://ballsandguts.fun/" target="_blank" rel="noreferrer" aria-label="Balls &amp; Guts">
+          <div class="shot-bar"><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-browser-url">ballsandguts.fun</span></div>
+          <img src="img/ballsandguts.jpg" alt="Balls &amp; Guts website screenshot" width="1600" height="1000" loading="lazy">
+        </a>
       </div>
 
-      <!-- Sub-panel 03 — Wallet Recovery -->
-      <div class="subpanel" data-subpanel="wallet-recovery">
+      <!-- 03 — WEB -->
+      <div class="panel active accent-web reveal" data-panel="web-development">
         <div>
-          <span class="panel-cat">03 / RECOVERY</span>
-          <h3 data-i18n="svc.wallet-recovery.title">Crypto Wallet Recovery</h3>
-          <p class="idea" data-i18n="svc.wallet-recovery.idea">Investigate what may still be recoverable.</p>
-          <p class="desc" data-i18n="svc.wallet-recovery.desc">Technical forensic research for lost or inaccessible cryptocurrency wallets, focused on identifying recoverable weaknesses in wallet generation, historical software behavior and cryptographic data.</p>
-          <div class="safety" data-i18n="svc.wallet-recovery.note">Recovery depends on the technical characteristics of each case — we never guarantee a result. Ownership verification is required before any analysis, and we will never ask you to send a seed phrase, private key or password through chat.</div>
+          <span class="panel-cat">03 / WEB DEVELOPMENT</span>
+          <h3 data-i18n="svc.web-development.title">Website Development</h3>
+          <p class="idea" data-i18n="svc.web-development.idea">A professional website in 24 hours.</p>
+          <p class="desc" data-i18n="svc.web-development.desc">Fast, modern websites for people and small businesses that need to get online without spending weeks or thousands of dollars.</p>
+          <div class="brand-block">
+            <div>
+              <div class="brand-identity"><span class="speed-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 36h30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M25 22h25M19 29h34" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M40 36l11 0-8 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="brand-wordmark">DAYSHIP <span class="accent-char">WEBS</span></div></div>
+              <div class="brand-tagline" data-i18n="svc.web-development.tagline">Beautiful websites in 24 hours, for the price of a meal.</div>
+              <div class="brand-chip">24H DELIVERY · FROM $49</div>
+            </div>
+            <a class="brand-visit" href="https://www.dayshipwebs.shop/" target="_blank" rel="noreferrer"><span data-i18n="svc.web-development.visit">Visit dayshipwebs.shop</span> ↗</a>
+          </div>
           <div class="cta-row">
-            <a class="btn btn-accent" data-cta-wa target="_blank" rel="noreferrer" data-msg="wallet-recovery"><span data-i18n="svc.wallet-recovery.cta">Discuss a recovery case</span> →</a>
+            <a class="btn btn-accent" data-cta-wa target="_blank" rel="noreferrer" data-msg="web-development"><span data-i18n="svc.web-development.cta">Get my website</span> →</a>
           </div>
         </div>
-        <div class="panel-visual">
-          <div class="pv-label" data-i18n="svc.wallet-recovery.visualLabel">FORENSIC LAYERS</div>
-          <div class="pv-flow">
-            <div class="pv-row"><span class="pv-chip on">NODE</span><span class="pv-line on"></span><span class="pv-chip">TX</span><span class="pv-line"></span><span class="pv-chip">BLOCK</span></div>
-            <div class="pv-row"><span class="pv-chip">SIGNATURE</span><span class="pv-line"></span><span class="pv-chip">ADDRESS</span></div>
-            <div class="pv-row"><span class="pv-chip on">ECDSA</span><span class="pv-line on"></span><span class="pv-chip on">PRNG</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Panel 02 — AI Video -->
-    <div class="panel accent-ai" data-panel="ai-video">
-      <div>
-        <span class="panel-cat">02 / AI VIDEO</span>
-        <h3 data-i18n="svc.ai-video.title">AI Video Creation</h3>
-        <p class="idea" data-i18n="svc.ai-video.idea">Turn ideas into moving images.</p>
-        <p class="desc" data-i18n="svc.ai-video.desc">AI-assisted video creation for music videos, short films, social content, cinematic concepts and visual experiments.</p>
-        <div class="brand-block">
-          <div>
-            <div class="brand-identity"><span class="robot-head-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="14" y="18" width="36" height="30" rx="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="M32 18V11M28 8h8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="32" r="3" fill="currentColor"/><circle cx="39" cy="32" r="3" fill="currentColor"/><path d="M23 40h18M10 29h4M50 29h4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span><div class="brand-wordmark">BALLS <span class="accent-char">&amp;</span> GUTS</div></div>
-            <div class="brand-tagline" data-i18n="svc.ai-video.tagline">We create it for you — or teach you how to create it.</div>
-          </div>
-          <a class="brand-visit" href="https://ballsandguts.fun/" target="_blank" rel="noreferrer">
-            <span data-i18n="svc.ai-video.visit">Visit ballsandguts.fun</span> ↗
-          </a>
-        </div>
-        <div class="cta-row">
-          <a class="btn btn-accent" data-cta-wa target="_blank" rel="noreferrer" data-msg="ai-video"><span data-i18n="svc.ai-video.cta">Create a video</span> →</a>
-        </div>
+        <a class="shot" href="https://www.dayshipwebs.shop/" target="_blank" rel="noreferrer" aria-label="Dayship Webs">
+          <div class="shot-bar"><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-browser-url">dayshipwebs.shop</span></div>
+          <img src="img/dayshipwebs.jpg" alt="Dayship Webs website screenshot" width="1600" height="1000" loading="lazy">
+        </a>
       </div>
-      <div class="panel-visual">
-        <div class="pv-label" data-i18n="svc.ai-video.visualLabel">GENERATION TIMELINE</div>
-        <div class="pv-timeline">
-          <div class="pv-frame on"></div>
-          <div class="pv-frame on"></div>
-          <div class="pv-frame"></div>
-          <div class="pv-frame on"></div>
-          <div class="pv-frame"></div>
-        </div>
-        <div class="pv-flow" style="margin-top:16px;">
-          <div class="pv-row"><span class="pv-chip on">IDEA</span><span class="pv-line on"></span><span class="pv-chip on">AI</span><span class="pv-line on"></span><span class="pv-chip">VIDEO</span></div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Panel 03 — Web Development -->
-    <div class="panel accent-web" data-panel="web-development">
-      <div>
-        <span class="panel-cat">03 / WEB DEVELOPMENT</span>
-        <h3 data-i18n="svc.web-development.title">Website Development</h3>
-        <p class="idea" data-i18n="svc.web-development.idea">A professional website in 24 hours.</p>
-        <p class="desc" data-i18n="svc.web-development.desc">Fast, modern websites for people and small businesses that need to get online without spending weeks or thousands of dollars.</p>
-        <div class="brand-block">
-          <div>
-            <div class="brand-identity"><span class="speed-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 36h30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M25 22h25M19 29h34" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M40 36l11 0-8 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="brand-wordmark">DAYSHIP <span class="accent-char">WEBS</span></div></div>
-            <div class="brand-tagline" data-i18n="svc.web-development.tagline">Beautiful websites in 24 hours, for the price of a meal.</div>
-            <div class="brand-chip">24H DELIVERY · FROM $49</div>
-          </div>
-          <a class="brand-visit" href="https://www.dayshipwebs.shop/" target="_blank" rel="noreferrer">
-            <span data-i18n="svc.web-development.visit">Visit dayshipwebs.shop</span> ↗
-          </a>
-        </div>
-        <div class="cta-row">
-          <a class="btn btn-accent" data-cta-wa target="_blank" rel="noreferrer" data-msg="web-development"><span data-i18n="svc.web-development.cta">Get my website</span> →</a>
-        </div>
-      </div>
-      <div class="panel-visual">
-        <div class="pv-label" data-i18n="svc.web-development.visualLabel">BROWSER PREVIEW</div>
-        <div class="pv-browser">
-          <div class="pv-browser-bar">
-            <span class="pv-dot"></span><span class="pv-dot"></span><span class="pv-dot"></span>
-            <span class="pv-browser-url">dayshipwebs.shop</span>
-          </div>
-          <div class="pv-browser-body">
-            <div class="pv-bar accent" style="width:55%;"></div>
-            <div class="pv-bar" style="width:90%;"></div>
-            <div class="pv-bar" style="width:75%;"></div>
-            <div class="pv-bar" style="width:82%;"></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1209,7 +1085,7 @@ const translations = {
     strip: { a: "No fake promises", b: "No unnecessary forms", c: "Direct WhatsApp / Telegram contact" },
     services: { eyebrow: "WHAT WE DO", title: "Three ways to use technology more effectively." },
     svc: {
-      crypto: { navlabel:"Crypto", badge:"3 services in one", title:"Crypto", idea:"From your first wallet to complex blockchain investigations." },
+      crypto: { navlabel:"Crypto", badge:"3 services in one", title:"Crypto", idea:"From your first wallet to complex blockchain investigations.", note:"Educational only, not investment advice. Recovery results are never guaranteed, and we'll never ask for your seed phrase, private key or password." },
       "crypto-intro": { navlabel:"Intro", title:"Introduction to Crypto", idea:"Understand crypto before you use it.",
         desc:"One-on-one practical guidance to help you create and use a secure crypto wallet through a popular centralized exchange, understand how receiving and sending payments works, and become familiar with depositing and withdrawing funds safely.",
         note:"This is educational and practical onboarding — not investment advice. We don't promise profits or recommend specific purchases.",
@@ -1280,7 +1156,7 @@ const translations = {
     strip: { a: "Sin promesas falsas", b: "Sin formularios innecesarios", c: "Contacto directo por WhatsApp / Telegram" },
     services: { eyebrow: "QUÉ HACEMOS", title: "Tres formas de usar la tecnología de manera más efectiva." },
     svc: {
-      crypto: { navlabel:"Cripto", badge:"3 servicios en uno", title:"Cripto", idea:"Desde tu primera wallet hasta investigaciones complejas de blockchain." },
+      crypto: { navlabel:"Cripto", badge:"3 servicios en uno", title:"Cripto", idea:"Desde tu primera wallet hasta investigaciones complejas de blockchain.", note:"Solo educativo, no es asesoramiento de inversión. Nunca garantizamos resultados de recuperación y nunca te vamos a pedir tu seed phrase, clave privada o contraseña." },
       "crypto-intro": { navlabel:"Intro", title:"Introducción a Cripto", idea:"Entendé cripto antes de usarlo.",
         desc:"Guía práctica y personalizada para ayudarte a crear y usar una wallet cripto segura en un exchange centralizado conocido, entender cómo funciona recibir y enviar pagos, y familiarizarte con depositar y retirar fondos de forma segura.",
         note:"Esto es onboarding educativo y práctico, no es asesoramiento de inversión. No prometemos ganancias ni recomendamos compras específicas.",
